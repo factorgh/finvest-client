@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Financial Management System
 
-## Getting Started
+## Overview
+The **Financial Management System** is a robust full-stack application designed to help users track their income, expenses, and overall financial health. Built with **Next.js** for the frontend and **Node.js** for the backend, this system provides an intuitive interface for financial planning and reporting.
 
-First, run the development server:
+## Features
+- **User Authentication** (JWT-based authentication for security)
+- **Expense & Income Tracking** (Categorized financial transactions)
+- **Budget Management** (Set monthly budgets and track spending trends)
+- **Reporting & Analytics** (Graphical representation of financial insights)
+- **Export Data** (Download financial records in CSV or PDF format)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+### Frontend
+- **Next.js** (React-based framework for SSR & SEO optimization)
+- **Tailwind CSS** (Modern styling framework)
+- **React Query** (Efficient data fetching and caching)
+
+### Backend
+- **Node.js** (Server-side JavaScript runtime)
+- **Express.js** (Minimalist web framework for APIs)
+- **MongoDB/PostgreSQL** (Flexible database options)
+- **Prisma ORM** (Database modeling and querying)
+- **JWT Authentication** (Secure login system)
+
+## Installation
+
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (v16 or later)
+- PostgreSQL or MongoDB (depending on your database choice)
+
+### Clone the Repository
+```sh
+git clone https://github.com/your-username/financial-management-system.git
+cd financial-management-system
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend Setup
+1. Navigate to the backend folder:
+```sh
+cd backend
+```
+2. Install dependencies:
+```sh
+npm install
+```
+3. Configure environment variables (create a `.env` file):
+```
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+```
+4. Start the backend server:
+```sh
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend Setup
+1. Navigate to the frontend folder:
+```sh
+cd ../frontend
+```
+2. Install dependencies:
+```sh
+npm install
+```
+3. Configure environment variables (create a `.env.local` file):
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+4. Start the frontend application:
+```sh
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
+- Sign up and log in to start tracking your financial activities.
+- Add transactions, categorize them, and monitor spending trends.
+- Generate financial reports and export them for reference.
 
-## Learn More
+## Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-To learn more about Next.js, take a look at the following resources:
+## License
+This project is licensed under the **MIT License**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
+### Contact
+For inquiries or collaborations, contact: abdulaziz021099@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
